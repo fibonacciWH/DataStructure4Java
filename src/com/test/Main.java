@@ -1,6 +1,7 @@
 package com.test;
 
 import com.datastructure.Array;
+import com.datastructure.ArrayQueue;
 import com.datastructure.ArrayStack;
 
 public class Main {
@@ -38,5 +39,22 @@ public class Main {
 //        stack.pop();
 //
 //        System.out.println(stack);
+
+//        String bracketsStr = "{[]}}";
+//        System.out.println(BracketsTest.isBracketsVaild(bracketsStr));
+//        String bracketsStr1 = "{[()]}";
+//        System.out.println(BracketsTest.isBracketsVaild(bracketsStr1));
+
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+
+        for(int i = 0; i < 10; i++) {
+            queue.enqueue(i);
+            System.out.println(queue);
+
+            if(i % 3 == 2) {
+                queue.dequeue();
+                System.out.println(queue);
+            }
+        }
     }
 }
