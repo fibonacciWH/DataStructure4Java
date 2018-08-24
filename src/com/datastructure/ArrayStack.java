@@ -38,7 +38,7 @@ public class ArrayStack<E> implements StackInterface<E> {
         return array.getSize();
     }
 
-    public int getCatacity() {
+    public int getCapacity() {
         return array.getCapacity();
     }
 

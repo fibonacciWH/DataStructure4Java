@@ -1,8 +1,6 @@
 package com.test;
 
-import com.datastructure.Array;
-import com.datastructure.ArrayQueue;
-import com.datastructure.ArrayStack;
+import com.datastructure.*;
 
 public class Main {
 
@@ -45,8 +43,46 @@ public class Main {
 //        String bracketsStr1 = "{[()]}";
 //        System.out.println(BracketsTest.isBracketsVaild(bracketsStr1));
 
-        ArrayQueue<Integer> queue = new ArrayQueue<>();
+//        ArrayQueue<Integer> queue = new ArrayQueue<>();
+//
+//        for(int i = 0; i < 10; i++) {
+//            queue.enqueue(i);
+//            System.out.println(queue);
+//
+//            if(i % 3 == 2) {
+//                queue.dequeue();
+//                System.out.println(queue);
+//            }
+//        }
 
+//        LinkedList<Integer> linkedList = new LinkedList<>();
+//        for (int i = 0; i < 5; i++) {
+//            linkedList.addFirst(i);
+//            System.out.println(linkedList);
+//        }
+//        linkedList.add(2, 666);
+//        System.out.println(linkedList);
+//
+//        linkedList.remove(2);
+//        System.out.println(linkedList);
+//
+//        linkedList.removeFirst();
+//        System.out.println(linkedList);
+//
+//        linkedList.removeLast();
+//        System.out.println(linkedList);
+
+//        LinkedListStack<Integer> stack = new LinkedListStack<>();
+//
+//        for(int i = 0; i < 5; i++) {
+//            stack.push(i);
+//            System.out.println(stack);
+//        }
+//
+//        stack.pop();
+//        System.out.println(stack);
+
+        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
         for(int i = 0; i < 10; i++) {
             queue.enqueue(i);
             System.out.println(queue);
