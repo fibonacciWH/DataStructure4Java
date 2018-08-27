@@ -82,15 +82,32 @@ public class Main {
 //        stack.pop();
 //        System.out.println(stack);
 
-        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
-        for(int i = 0; i < 10; i++) {
-            queue.enqueue(i);
-            System.out.println(queue);
+//        LinkedListQueue<Integer> queue = new LinkedListQueue<>();
+//        for(int i = 0; i < 10; i++) {
+//            queue.enqueue(i);
+//            System.out.println(queue);
+//
+//            if(i % 3 == 2) {
+//                queue.dequeue();
+//                System.out.println(queue);
+//            }
+//        }
 
-            if(i % 3 == 2) {
-                queue.dequeue();
-                System.out.println(queue);
-            }
+        BST<Integer> bst = new BST<>();
+        int[] nums = {5, 3, 6, 8, 4, 2};
+        ///////////////////
+        //       5       //
+        //     /  \      //
+        //    3   6      //
+        //   / \   \     //
+        //  2  4   8     //
+        ///////////////////
+        for (int num : nums) {
+            bst.add(num);
         }
+        bst.preOrder();
+        bst.inOrder();
+        bst.postOrder();
+        System.out.println(bst.toString());
     }
 }
