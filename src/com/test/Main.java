@@ -117,28 +117,51 @@ public class Main {
 //        bst.levelOrder();
 
 
-        BST<Integer> bst = new BST<>();
+//        BST<Integer> bst = new BST<>();
+//        Random random = new Random();
+//
+//        int n = 1000;
+//
+//        for (int i = 0; i < n; i++) {
+//            bst.add(random.nextInt(10000));
+//        }
+//
+//        List<Integer> nums = new ArrayList<>();
+//        while (!bst.isEmpty()) {
+//            nums.add(bst.removeMin());
+//        }
+//        System.out.println(nums);
+//
+//
+//        for (int i = 1; i < nums.size(); i++) {
+//            if (nums.get(i - 1) > nums.get(i)) {
+//                throw new IllegalArgumentException("error");
+//            }
+//        }
+//
+//        System.out.println("removeMin success!");
+
+
+
+        int n = 1000000;
+
+        MaxHeap<Integer> maxHeap = new MaxHeap<>();
         Random random = new Random();
-
-        int n = 1000;
-
         for (int i = 0; i < n; i++) {
-            bst.add(random.nextInt(10000));
+            maxHeap.add(random.nextInt(Integer.MAX_VALUE));
         }
 
-        List<Integer> nums = new ArrayList<>();
-        while (!bst.isEmpty()) {
-            nums.add(bst.removeMin());
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = maxHeap.extractMax();
         }
-        System.out.println(nums);
 
-
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums.get(i - 1) > nums.get(i)) {
-                throw new IllegalArgumentException("error");
+        for (int i = 1; i < n; i++) {
+            if (arr[i - 1] < arr[i]) {
+                throw new IllegalArgumentException("Error");
             }
         }
 
-        System.out.println("removeMin success!");
+        System.out.println("Test MaxHeap completed.");
     }
 }
