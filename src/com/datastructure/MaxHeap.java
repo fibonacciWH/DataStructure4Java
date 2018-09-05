@@ -1,6 +1,7 @@
 package com.datastructure;
 
 //最大堆的性质 ：1.完全二叉树 2.父节点大于子节点
+//堆也是平衡二叉树
 public class MaxHeap<E extends Comparable<E>> {
 
     private Array<E> data;

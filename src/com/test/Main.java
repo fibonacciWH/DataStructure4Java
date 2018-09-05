@@ -142,26 +142,36 @@ public class Main {
 //        System.out.println("removeMin success!");
 
 
+//        int n = 1000000;
+//
+//        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+//        Random random = new Random();
+//        for (int i = 0; i < n; i++) {
+//            maxHeap.add(random.nextInt(Integer.MAX_VALUE));
+//        }
+//
+//        int[] arr = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = maxHeap.extractMax();
+//        }
+//
+//        for (int i = 1; i < n; i++) {
+//            if (arr[i - 1] < arr[i]) {
+//                throw new IllegalArgumentException("Error");
+//            }
+//        }
+//
+//        System.out.println("Test MaxHeap completed.");
 
-        int n = 1000000;
-
-        MaxHeap<Integer> maxHeap = new MaxHeap<>();
-        Random random = new Random();
-        for (int i = 0; i < n; i++) {
-            maxHeap.add(random.nextInt(Integer.MAX_VALUE));
-        }
-
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = maxHeap.extractMax();
-        }
-
-        for (int i = 1; i < n; i++) {
-            if (arr[i - 1] < arr[i]) {
-                throw new IllegalArgumentException("Error");
-            }
-        }
-
-        System.out.println("Test MaxHeap completed.");
+        Integer[] nums = {-2, 0, 3, -5, 2, -1};
+//        SegmentTree<Integer> segTree = new SegmentTree<>(nums, new Merger<Integer>() {
+//            @Override
+//            public Integer merge(Integer a, Integer b) {
+//                return a + b;
+//            }
+//        });
+        SegmentTree<Integer> segTree = new SegmentTree<>(nums, (a, b) -> a + b);
+//        System.out.println(segTree.toString());
+        System.out.println(segTree.query(2, 5));
     }
 }
