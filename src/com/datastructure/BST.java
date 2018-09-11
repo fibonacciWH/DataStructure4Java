@@ -234,8 +234,8 @@ public class BST<E extends Comparable<E>> {
         }
 
         postOrder(node.left);
-        System.out.println(node.e);
         postOrder(node.right);
+        System.out.println(node.e);
     }
 
     //从二分搜索树中删除最小值所在的节点，返回最小值
